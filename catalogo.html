@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catálogo Virtual - AMERICANMOON</title>
+  <style>
+    header {
+      justify-content: center; /* Centra el contenido del header */
+    }
+    h1 {
+      font-size: 24px; /* Aumenta el tamaño del título */
+    }
+  </style>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Inter, system-ui, Arial, sans-serif;
+    }
+
+    :root {
+      --accent: #ff9f31;
+      --card: #1a1a1a;
+      --muted: #b0b0b0;
+    }
+
+    html, body {
+      height: 100%;
+      background: url('IMAGENES/001.png') fixed no-repeat center/cover;
+      color: var(--muted);
+    }
+
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 30px 20px;
+      background: rgba(0, 0, 0, 0.8);
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    header{
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
+    header img{
+      height:64px;
+      border-radius:8px;
+    }
+    .logo{
+      display:flex;
+      flex-direction:column;
+    }
+    h1{
+      margin:0;
+      font-size:20px;
+      color:white
+    }
+    p.lead{
+      margin:4px 0 12px;
+      color:#bdbdbd
+    }
+
+    /* TARJETAS DE INFO */
+    .info-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin:20px 0 30px;
+    }
+    .info-card{
+      background:#1b1b1b;
+      padding:20px;
+      border-radius:14px;
+      box-shadow:0 4px 18px rgba(0,0,0,.5);
+      border:1px solid #292929;
+    }
+    .info-title{
+      margin:0 0 10px;
+      font-size:18px;
+      color:var(--accent);
+      font-weight:700;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .info-title span{
+      font-size:22px;
+    }
+    .info-text{
+      color:#d1d1d1;
+      font-size:14px;
+      line-height:1.5;
+    }
+    .promo-list{
+      margin:0;
+      padding-left:20px;
+      color:#d1d1d1;
+      font-size:14px;
+      line-height:1.5;
+    }
+
+    /* PRODUCTOS */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+      gap:14px;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:12px;
+      box-shadow:0 4px 18px rgba(0,0,0,.6)
+    }
+    .imgwrap{
+      height:260px;
+      border-radius:8px;
+      overflow:hidden;
+      background:linear-gradient(180deg,#111,#222);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .imgwrap img{
+      max-width:100%;
+      max-height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .meta{margin-top:8px}
+    .name{font-weight:600;color:white}
+    .price{margin-top:6px;font-size:18px;color:var(--accent);font-weight:700}
+    .small{font-size:13px;color:#9f9f9f}
+
+    footer{
+      margin-top:40px;
+      color:#9a9a9a;
+      font-size:13px;
+      text-align:center;
+      padding-bottom:20px;
+    }
+
+    @media (max-width:650px){
+      .info-grid{grid-template-columns:1fr;}
+    }
+    @media (max-width:520px){
+      .imgwrap{height:180px}
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+  <br>
+  <!-- HEADER CORREGIDO -->
+  <header>
+    <img src="IMAGENES/025.png" alt="Logo">
+    <div class="logo">
+      <center><h1>CATÁLOGO — AMERICANMOON</h1></center>
+
+      <p class="lead">Catálogo de camisas estampadas — precio único y tallas disponibles.</p>
+    </div>
+  </header>
+  <br>
+  <br>
+<hr>
+<br>
+<br>
+<br>
+  <!-- TARJETAS DE INFORMACIÓN -->
+  <div class="info-grid">
+
+    <div class="info-card">
+      <h2 class="info-title"><span>💛💙❤️</span> AMERICANMOON <span>💛💙❤️</span></h2>
+      <p class="info-text">
+        AMERICANMOON es una marca enfocada en camisas estampadas modernas y cómodas.
+        Ofrecemos variedad de tallas (S a XXL), diseños actuales y precios accesibles para ventas por unidad y por mayor.
+        Calidad pensada para clientes que buscan estilo a buen precio.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h2 class="info-title"><span>🔥🔥🔥</span> Promociones <span>🔥🔥🔥</span></h2>
+      <ul class="promo-list">
+        <li>Lleva 2 por <strong>$80.000</strong></li>
+        <li>Lleva 12 por <strong>$420.000</strong></li>
+      </ul>
+    </div>
+
+  </div>
+  <br>
+  <br>
+  <br>
+<hr> 
+<br>
+<br>
+  <!-- CATÁLOGO -->
+  <main id="catalog" class="grid"></main>
+<br>
+<br>
+<footer class="contact-footer">
+  <div class="contact-container">
+    <a class="contact-item" href="tel:573132044493" aria-label="Llamar">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden></svg>
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.86 19.86 0 0 1-3.07-8.63A2 2 0 0 1 4.08 2h3a2 2 0 0 1 2 1.72c.12 1.01.38 2 .78 2.92a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.16-1.16a2 2 0 0 1 2.11-.45c.92.4 1.91.66 2.92.78A2 2 0 0 1 22 16.92z" fill="currentColor"/>
+      </svg>
+      <span class="contact-text">+57 313 204 4493</span>
+    </a>
+
+    <a class="contact-item" href="https://wa.me/573132044493" target="_blank" rel="noopener" aria-label="Chatear por WhatsApp">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+        <path d="M20.52 3.48A11.94 11.94 0 0 0 12 .5 12 12 0 0 0 .5 12c0 2.12.55 4.14 1.6 5.92L.5 23.5l5.83-1.52A11.94 11.94 0 0 0 12 23.5c6.63 0 11.99-5.37 11.99-11.99 0-3.2-1.25-6.2-3.47-8.03zM12 21.5a9.5 9.5 0 0 1-4.81-1.3l-.34-.2-3.45.9.92-3.36-.22-.34A9.5 9.5 0 1 1 21.5 12 9.5 9.5 0 0 1 12 21.5z" fill="currentColor"/>
+        <path d="M17.3 14.2c-.3-.15-1.77-.87-2.05-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.96 1.17-.18.2-.37.22-.68.07-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.5-1.8-1.67-2.1-.17-.3 0-.46.13-.6.13-.13.3-.34.45-.51.15-.17.2-.28.3-.47.1-.18.05-.34-.02-.49-.07-.15-.68-1.64-.94-2.25-.25-.59-.51-.51-.68-.52l-.57-.01c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27 0 1.33.97 2.62 1.1 2.8.13.17 1.9 2.92 4.6 3.98 2.7 1.06 2.7.71 3.18.66.48-.05 1.56-.64 1.78-1.26.22-.62.22-1.15.15-1.26-.07-.12-.26-.18-.56-.33z" fill="currentColor"/>
+      </svg>
+      <span class="contact-text">WhatsApp</span>
+    </a>
+
+    <a class="contact-item" href="mailto:americanmoon777@gmail.com" aria-label="Enviar correo">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+        <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/>
+      </svg>
+      <span class="contact-text">AMERICANMOON777</span>
+    </a>
+  </div>
+
+  <style>
+    .contact-footer {
+      margin-top: 40px;
+      border-bottom: 1px solid #292929;
+      border-top: 1px solid #292929;
+      padding: 20px 0;
+    }
+    .contact-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+    .contact-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(255, 159, 49, 0.4);
+    }
+    .contact-text {
+      font-size: 14px;
+    }
+  </style>
+</footer>
+
+
+ <footer>
+   AMERICANMOON © 2025
+  </footer>
+
+</div>
+
+<script>
+  const products = [
+    {id:1, name:'Camisas Estampadas', price:'$44.990', sizes:'S,M,L,XL,XXL', colors:'Colores disponibles', img:'IMAGENES/001.jpeg'},
+    {id:2, name:'Camisas Estampadas', price:'$44.990', sizes:'S,M,L,XL,XXL', colors:'Colores disponibles', img:'IMAGENES/002.jpeg'},
+    {id:3, name:'Camisas Estampadas', price:'$44.990', sizes:'S,M,L,XL,XXL', colors:'Colores disponibles', img:'IMAGENES/003.jpeg'},
+    {id:4, name:'Camisas Estampadas', price:'$44.990', sizes:'S,M,L,XL,XXL', colors:'Colores disponibles', img:'IMAGENES/004.jpeg'},
+    {id:5, name:'Camisas Estampadas', price:'$44.990', sizes:'S,M,L,XL,XXL', colors:'Colores disponibles', img:'IMAGENES/005.jpeg'},
+    {id:6, name:'Camisas Estampadas', price:'$44.990', sizes:'S,M,L,XL,XXL', colors:'Colores disponibles', img:'IMAGENES/006.jpeg'},
+    {id:7, name:'Camisas Estampadas', price:'$44.990', sizes:'S,M,L,XL,XXL', colors:'Colores disponibles', img:'IMAGENES/007.jpeg'},
+    {id:8, name:'Camisas Estampadas', price:'$44.990', sizes:'S,M,L,XL,XXL', colors:'Colores disponibles', img:'IMAGENES/008.jpeg'},
+    {id:9, name:'Camisas Estampadas', price:'$44.990', sizes:'S,M,L,XL,XXL', colors:'Colores disponibles', img:'IMAGENES/025.jpeg'},
+    {id:10, name:'Camisas Estampadas', price:'$44.990', sizes:'S,M,L,XL,XXL', colors:'Colores disponibles', img:'IMAGENES/010.jpeg'},
+    {id:11, name:'Camisas Estampadas', price:'$44.990', sizes:'S,M,L,XL,XXL', colors:'Colores disponibles', img:'IMAGENES/011.jpeg'},
+    {id:12, name:'Camisas Estampadas', price:'$44.990', sizes:'S,M,L,XL,XXL', colors:'Colores disponibles', img:'IMAGENES/012.jpeg'},
+    {id:13, name:'Camisas Estampadas', price:'$44.990', sizes:'S,M,L,XL,XXL', colors:'Colores disponibles', img:'IMAGENES/013.jpeg'},
+    {id:14, name:'Camisas Estampadas', price:'$44.990', sizes:'S,M,L,XL,XXL', colors:'Colores disponibles', img:'IMAGENES/014.jpeg'},
+    {id:15, name:'Camisas Estampadas', price:'$44.990', sizes:'S,M,L,XL,XXL', colors:'Colores disponibles', img:'IMAGENES/015.jpeg'},
+    {id:16, name:'Camisas Estampadas', price:'$44.990', sizes:'S,M,L,XL,XXL', colors:'Colores disponibles', img:'IMAGENES/016.jpeg'},
+    {id:17, name:'Camisas Estampadas', price:'$44.990', sizes:'S,M,L,XL,XXL', colors:'Colores disponibles', img:'IMAGENES/017.jpeg'},
+    {id:18, name:'Camisas Estampadas', price:'$44.990', sizes:'S,M,L,XL,XXL', colors:'Colores disponibles', img:'IMAGENES/018.jpeg'},
+    {id:19, name:'Camisas Estampadas', price:'$44.990', sizes:'S,M,L,XL,XXL', colors:'Colores disponibles', img:'IMAGENES/019.jpeg'},
+    {id:20, name:'Camisas Estampadas', price:'$44.990', sizes:'S,M,L,XL,XXL', colors:'Colores disponibles', img:'IMAGENES/020.jpeg'},
+    {id:21, name:'Camisas Estampadas', price:'$44.990', sizes:'S,M,L,XL,XXL', colors:'Colores disponibles', img:'IMAGENES/021.jpeg'},
+    {id:22, name:'Camisas Estampadas', price:'$44.990', sizes:'S,M,L,XL,XXL', colors:'Colores disponibles', img:'IMAGENES/022.jpeg'},
+    {id:23, name:'Camisas Estampadas', price:'$44.990', sizes:'S,M,L,XL,XXL', colors:'Colores disponibles', img:'IMAGENES/023.jpeg'},
+    {id:24, name:'Camisas Estampadas', price:'$44.990', sizes:'S,M,L,XL,XXL', colors:'Colores disponibles', img:'IMAGENES/024.jpeg'}
+  ];
+
+  const catalog = document.getElementById('catalog');
+
+  function render(){
+    catalog.innerHTML = '';
+
+    products.forEach(p => {
+      const card = document.createElement('article');
+      card.className = 'card';
+
+      card.innerHTML = `
+        <div class="imgwrap">
+          <img src="${p.img}" alt="${p.name}">
+        </div>
+        <div class="meta">
+          <div class="name">${p.name}</div>
+          <div class="small">Tallas: ${p.sizes} · ${p.colors}</div>
+          <div class="price">${p.price}</div>
+        </div>
+      `;
+
+      catalog.appendChild(card);
+    });
+  }
+
+  render();
+</script>
+
+</body>
+</html>
+
